@@ -1,6 +1,7 @@
 import express from "express";
 import BaseRouter from "./routes/v1/Base";
 import cors from "cors";
+import ip from "ip";
 
 const app = express();
 
@@ -12,5 +13,5 @@ app.use("/v1", BaseRouter);
 const port = 3001;
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port}, ip ${ip.address()}`);
 });
