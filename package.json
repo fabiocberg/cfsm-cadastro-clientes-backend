@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child src/server.ts"
+    "dev": "ts-node-dev --exit-child src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsc",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "@google-cloud/storage": "^5.16.1",
